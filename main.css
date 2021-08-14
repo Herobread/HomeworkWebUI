@@ -37,11 +37,6 @@ td {
     border: #bbbbbb solid 1px;
 }
 
-.dayNum {
-    width: 100%;
-    height: 100px;
-}
-
 .num {
     font-family: Poppins;
     font-size: 40px;
@@ -53,6 +48,10 @@ td {
 .redCircle {
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -216,6 +215,11 @@ li a {
     text-decoration: none;
 }
 
+.tableLeft>tbody>tr>td {
+    width: 100%;
+    height: 100px;
+}
+
 
 /* Change the link color to #111 (black) on hover */
 
@@ -252,7 +256,7 @@ li a:hover {
         display: flex;
         flex-flow: wrap row;
     }
-    td {
+    .tableLeft>tbody>tr>td {
         width: 100%;
         height: 200px;
     }
