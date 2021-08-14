@@ -90,6 +90,7 @@ td {
 }
 
 .content {
+    border-right: transparent;
     width: 50%;
     vertical-align: top;
 }
@@ -220,6 +221,15 @@ li a {
 
 li a:hover {
     background-color: #111;
+}
+
+@media screen and (max-width: 800px) and (min-width:700px) {
+    #day6 {
+        display: none;
+    }
+    #day6Desc {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 700px) {

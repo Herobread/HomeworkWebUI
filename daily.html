@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 
 <head>
+    <link rel="stylesheet" href="daily.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <nav>
-        <a href="index.html">Week</a>
-        <a href="daily.html">Daily</a>
+        <div id="hamburger">
+            <input type="checkbox" />
+            <div class="hamburgerItems" id="hambTop"></div>
+            <div class="hamburgerItems" id="hambCen"></div>
+            <div class="hamburgerItems" id="hambBot"></div>
+
+            <ul id="menu">
+                <li class="nav-item"><a href="books.html">Books</a></li>
+                <li class="nav-item"><a href="daily.html">Daily</a></li>
+                <li class="nav-item"><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+        <!--<a href="index.html">Week</a>
+        <a href="daily.html">Daily</a>-->
     </nav>
+
+    <h1>Tuesday, 2</h1>
+    <p id="subTime">10:00</p>
+
+    <table>
+        <tr>
+            <td style="border-right: transparent;">
+                <p class="subject">Now: Algebra</p>
+                <p class="subjectTime">10:00-10:45</p>
+            </td>
+            <td style="border-left: transparent;">
+                <p id="timeLeft">30min</p>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="border-top: transparent;">
+                <p class="subject">Break</p>
+                <p class="subjectTime">10:45-11:00</p>
+            </td>
+            <td style="border-left: transparent;">
+
+            </td>
+        </tr>
+        <tr>
+            <td style="border-top: transparent;">
+                <p class="subject">Informatics</p>
+                <p class="subjectTime">10:45-11:00</p>
+            </td>
+            <td style="border-left: transparent;">
+                <p id="timeLeft">104</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-top: transparent;">
+                <p class="subject">Break</p>
+                <p class="subjectTime">10:45-11:00</p>
+            </td>
+            <td style="border-left: transparent;">
+
+            </td>
+        </tr>
+    </table>
 </body>
