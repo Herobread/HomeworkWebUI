@@ -10,6 +10,7 @@ for (var i = 0, tdate = new Date(date - 86400000), panel = document.getElementBy
 
 var xhr = new XMLHttpRequest();
 
+/*
 xhr.onload = function(e) {
     if (xhr.status == 200) {
         var homeworkList = [];
@@ -25,3 +26,48 @@ xhr.onload = function(e) {
         }
     }
 };
+*/
+
+// converting js date to string like 2000-12-01 because sql is string and js is date
+
+function jsDateToStr(date_) {
+    var month = date_.getUTCMonth() + 1;
+    var day = date_.getUTCDate();
+    var year = date_.getUTCFullYear();
+    newdate = year + "-";
+    if (month < 10)
+        newdate += "0" + month;
+    else
+        newdate += month;
+    if (day < 10)
+        newdate += "-" + "0" + day;
+    else
+        newdate += "-" + day;
+
+    return newdate;
+}
+
+var url = "https://nodejsclusters-44722-0.cloudclusters.net/homework/week";
+
+$.getJSON('https://nodejsclusters-44722-0.cloudclusters.net/homework/week', function(data) {
+    console.log(data);
+
+    panel = document.getElementById("hwDescription");
+
+    console.log("Homework:");
+
+    console.log("Parsed:");
+    for (var i = 0; i < data.length; i += 1) {
+
+        var date = new Date();
+
+        date.setDate(date.getDate() - 2);
+
+        for (var ii = 0; ii < 6; ii += 1) {
+            date.setDate(date.getDate() + 1);
+            if (data[i]["date"].substring(0, 10) == jsDateToStr(date)) {
+                panel.children[ii].children[0].innerHTML += data[i]["subject"] + `:<br>` + data[i]["description"] + `<br><br>`;
+            }
+        }
+    }
+});
