@@ -67,7 +67,18 @@ $.getJSON('https://nodejsclusters-44722-0.cloudclusters.net/homework/week', func
             date.setDate(date.getDate() + 1);
             if (data[i]["date"].substring(0, 10) == jsDateToStr(date)) {
                 panel.children[ii].children[0].innerHTML += data[i]["subject"] + `:<br>` + data[i]["description"] + `<br><br>`;
+
             }
         }
     }
+
+    if (window.innerWidth <= 700) {
+        for (var i = 0; i < 5; i += 1)
+            document.getElementById("dayPanel").children[i].style.height = document.getElementById("hwDescription").children[i].clientHeight - 2 + 'px';
+        //alert(document.getElementById("hwDescription").children[0].clientHeight);
+    }
 });
+
+
+
+//document.getElementById("two").style.height = document.getElementById("one").clientHeight;
