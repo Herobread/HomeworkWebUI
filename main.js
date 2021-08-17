@@ -8,26 +8,6 @@ for (var i = 0, tdate = new Date(date - 86400000), panel = document.getElementBy
     panel.children[i].children[2].textContent = weekday[tdate.getDay()].substring(0, 3);
 }
 
-var xhr = new XMLHttpRequest();
-
-/*
-xhr.onload = function(e) {
-    if (xhr.status == 200) {
-        var homeworkList = [];
-        try {
-            homeworkList = JSON.parse(xhr.response);
-        } catch (e) {
-            console.error("Parse error");
-        }
-        if (homeworkList) {
-
-        } else {
-            console.warn("Response empty");
-        }
-    }
-};
-*/
-
 // converting js date to string like 2000-12-01 because sql is string and js is date
 
 function jsDateToStr(date_) {

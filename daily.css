@@ -162,6 +162,7 @@ td {
 }
 
 .subject {
+    width: fit-content;
     font-family: Poppins;
     font-size: 20pt;
     font-weight: 500px;
@@ -180,7 +181,7 @@ td {
     color: #3d3d3d;
 }
 
-#timeLeft {
+.timeLeft {
     text-align: right;
     margin-right: 40px;
     font-family: Poppins;
